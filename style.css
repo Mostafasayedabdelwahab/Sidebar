@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 25px;
+}
+body {
+  background-image: url(landing.jpg);
+  background-size: cover;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+#menu {
+  position: absolute;
+  right: 0;
+  margin: 25px;
+  color: #5c8edf;
+  animation: menu 0.5s infinite alternate;
+}
+.sidebar {
+  width: 25%;
+  height: 100vh;
+  background-color: #f0f8ff66;
+  transition: 0.5s;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  transform: translate(-100%);
+}
+.show {
+  transform: translate(0);
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.fa-xmark {
+  color: #8b0000;
+  transition: 0.6s;
+}
+.fa-xmark:hover {
+  rotate: 360deg;
+  color: #8b000090;
+}
+
+.links {
+  padding: 20px 0;
+}
+.links a {
+  color: black;
+  display: block;
+  width: 100%;
+  padding: 15px 5px;
+  margin: 15px;
+  transition: 0.6s;
+}
+.links a:hover {
+  background-color: #5c8edf;
+  letter-spacing: 3px;
+  color: #8b0000;
+}
+
+.icons {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.icons i {
+  color: #000;
+  transition: 0.9s;
+}
+.icons i:hover {
+  color: #5c8edf;
+}
+
+@media screen and (max-width: 761px) {
+  .sidebar {
+    width: 100%;
+  }
+}
+/* @media screen and (min-width: 676px) {
+  .sidebar {
+    width: 400px;
+  }
+} */
+
+@keyframes menu {
+  0% {
+    color: #5c8edf;
+  }
+  100% {
+    color: #5c8edf70;
+    scale: 1.4;
+  }
+}
